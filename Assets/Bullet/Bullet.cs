@@ -12,11 +12,7 @@ public class Bullet : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (transform.localPosition.x < maxX){
-			transform.Translate(velocity * Time.deltaTime,0,0);
-		}else{
-			Destroy(transform.gameObject);
-		}
+		transform.Translate(velocity * Time.deltaTime,0,0);
 	}
 	
 	void OnTriggerEnter(Collider other) {
